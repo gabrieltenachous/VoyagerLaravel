@@ -99,7 +99,7 @@ return [
         /*
          * Set whether or not the multilingual is supported by the BREAD input.
          */
-        'enabled' => true,
+        'enabled' => false,
 
         /*
          * Select default language
@@ -110,7 +110,8 @@ return [
          * Select languages that are supported.
          */
         'locales' => [
-            'pt_BR',
+            'en',
+            //'pt',
         ],
     ],
 
@@ -136,14 +137,20 @@ return [
                 'icon_class'   => 'voyager-home',
                 'target_blank' => true,
             ],
+            'Produtos' => [
+                'route'      => 'voyager.produtos.index',
+                'icon_class' => 'voyager-bag',
+            ],
             'voyager::generic.logout' => [
                 'route'      => 'voyager.logout',
                 'icon_class' => 'voyager-power',
             ],
+            
         ],
 
         'widgets' => [
-
+            'App\\Widgets\\ProdutosDimmer',
+            'App\\Widgets\\BBCDimmer'
         ],
 
     ],

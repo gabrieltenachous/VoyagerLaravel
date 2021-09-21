@@ -23,7 +23,9 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-
+Route::get('/postagens',function (){
+    return view('postagens');
+});
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
